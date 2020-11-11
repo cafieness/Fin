@@ -1,0 +1,211 @@
+$turquoise: #32b482;
+$light-grey: #b5acac;
+$grey: #6a6464;
+$dark-blue: #19323c;
+$blue: #597eff;
+$dark-grey: #625e5e;
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url(./assets/fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url(./assets/fonts/OpenSans-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url(./assets/fonts/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Regular';
+}
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1980px;
+  height: 100vh;
+  max-height: 1080px;
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  padding: 55px 100px 55px 55px;
+  background-color: #f9f9fd;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    .titleBlock {
+      &__title {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      &__date {
+        margin-top: 10px;
+        font-size: 22px;
+        color: $light-grey;
+      }
+    }
+    .profile {
+      width: 350px;
+      display: flex;
+      align-items: center;
+      border-radius: 15px;
+
+      cursor: default;
+      &__pic {
+        height: 55px;
+      }
+      &__center {
+        align-items: center;
+        display: flex;
+      }
+      &__info {
+        position: relative;
+        margin: 0 20px;
+        &-username {
+          font-size: 22px;
+          margin-bottom: 6px;
+        }
+      }
+      &__dropdown {
+        display: none;
+        background: #e9e9eb;
+        border-radius: 15px;
+        width: 235px;
+        margin-top: 20px;
+        position: absolute;
+        .fas {
+          margin-right: 10px;
+        }
+        &-password,
+        &-signout {
+          padding: 15px 0 15px 20px;
+          font-size: 18px;
+          transition: 0.3s;
+        }
+      }
+      .active {
+        display: block;
+      }
+    }
+  }
+  .overview {
+    &__center {
+      display: flex;
+      justify-content: space-between;
+
+      .filter {
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #5ddca0 0%, #3dc18f 100%);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        width: 380px;
+        padding: 40px 0 30px;
+        .selectdiv {
+          position: relative;
+          &:after {
+            content: '\f078';
+            font: 18px FontAwesome;
+            color: #d5d5d5;
+            right: 11px;
+            top: 0px;
+            padding: 15px 0px 0px 8px;
+            position: absolute;
+            pointer-events: none;
+          }
+        }
+        &__select {
+          outline: none;
+          appearance: none;
+          width: 320px;
+          margin-bottom: 15px;
+          font-size: 18px;
+          color: #777575;
+          padding: 13px;
+          option {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+        &__date {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          &-start,
+          &-end {
+            color: #525252;
+            font-weight: bold;
+            font-size: 14px;
+            outline: none;
+            width: 150px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+          }
+          &-start {
+            margin-right: 20px;
+          }
+        }
+        &__money {
+          display: flex;
+          align-items: center;
+          &-start,
+          &-end {
+            font-weight: bold;
+            color: #525252;
+            width: 150px;
+            font-size: 14px;
+            padding: 10px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+          }
+          hr {
+            margin: 0 5px;
+            height: 2px;
+            width: 10px;
+          }
+        }
+        &__button {
+          margin-top: 30px;
+          width: 200px;
+          padding: 10px;
+          font-size: 18px;
+          color: #04a064;
+          border: none;
+          outline: none;
+          border-radius: 15px;
+          background: white;
+          cursor: pointer;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

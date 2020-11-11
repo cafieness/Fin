@@ -1,0 +1,138 @@
+.buttonRow {
+  margin-bottom: 20px;
+  &__btn {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    width: 130px;
+    padding: 12px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    border: transparent;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    .fas {
+      margin-right: 5px;
+    }
+  }
+  .btn {
+    &-transfer {
+      background: #ff8a5b;
+      &:hover {
+        background: #f58e65;
+      }
+    }
+    &-expense {
+      background: #f03a47;
+      &:hover {
+        background: #f14d58;
+      }
+    }
+    &-income {
+      background: #32b482;
+      &:hover {
+        background: #3bce95;
+      }
+    }
+  }
+}
+.modal {
+  padding: 25px 0;
+  outline: none;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  h1 {
+    color: rgb(100, 99, 99);
+    border-radius: 15px 15px 0 0;
+    font-weight: normal;
+    width: 100%;
+    margin: 0 0 20px 50px;
+  }
+  hr {
+    margin-bottom: 20px;
+  }
+}
+.makeStyles-table-32 {
+  width: 1400px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  thead th {
+    border: none;
+    background-color: linear-gradient(180deg, #4fe69f 0%, #2fb877 100%);
+    &__text {
+      text-align: center;
+      color: white;
+      padding: 10px;
+      width: 175px;
+    }
+  }
+  &__row {
+    &-text {
+      text-align: center;
+      width: 175px;
+      padding: 10px;
+      color: #625e5e;
+    }
+  }
+}
+.makeStyles-secondary-7 {
+  background: rgb(255, 255, 255) !important;
+}
+.form {
+  &__section {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 22px;
+      margin-top: 15px;
+    }
+    select,
+    input,
+    textarea {
+      outline: none;
+      width: 300px;
+      font-size: 20px;
+      margin-top: 7px;
+    }
+    textarea {
+      padding: 5px;
+    }
+  }
+  &__close {
+    background-color: #ffffff;
+    color: #000;
+  }
+  &__submit {
+    outline: none;
+    color: white;
+    margin: 80px 0 0;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  &__submit.income {
+    background: #32b482;
+  }
+  &__submit.expense {
+    background: #f03a47;
+  }
+  &__submit.transfer {
+    background: #ff8a5b;
+  }
+}

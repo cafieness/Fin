@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url(./../../assets/fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url(./../../assets/fonts/OpenSans-Light.ttf);
+  font-weight: 300;
+}
+.navbar {
+  font-family: 'Open Sans Regular';
+  width: 290px;
+  height: 100vh;
+  max-height: 1080px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin: 50px 81px 50px 81px;
+    cursor: pointer;
+    &-text {
+      color: black;
+      font-size: 24px;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+  }
+
+  &__row {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin: 5px 10px 5px 0;
+    border-radius: 0 48px 48px 0;
+    padding: 14px 0 14px 48px;
+    width: 270px;
+    font-weight: 300;
+    &-img {
+      margin-right: 20px;
+      color: #19323c;
+      font-size: 18px;
+    }
+    &-text {
+      font-family: 'Open Sans Light';
+      color: black;
+      font-size: 18px;
+    }
+  }
+  &__row:hover,
+  .active {
+    background: #32b482;
+  }
+  &__row:hover &__row-text,
+  &__row:hover &__row-img,
+  .active &__row-text,
+  .active &__row-img {
+    color: white;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    &-button {
+      padding: 10px 0;
+      margin: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      color: white;
+      width: 230px;
+      background: linear-gradient(180deg, #4fd998 0%, #20bc72 100%);
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      outline: none;
+      border: 1px solid #32b482;
+      transition: 0.4s;
+    }
+    &-button:hover {
+      background: #fff;
+      color: #32b482;
+      border-color: #32b482;
+    }
+    &-text {
+      width: 215px;
+      color: #b5acac;
+      text-align: center;
+      font-size: 14px;
+      line-height: 23px;
+      margin-bottom: 20px;
+    }
+  }
+}
